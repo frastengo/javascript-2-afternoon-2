@@ -17,7 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first(arr) {
+  return arr[0]
+}
 
 
 
@@ -32,7 +34,10 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last(arr) {
+  var lastItem = arr.pop()
+  return lastItem
+}
 
 
 
