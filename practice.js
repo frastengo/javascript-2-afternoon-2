@@ -73,7 +73,26 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
 
-//Code Here
+// first try
+
+// function reversedLooper(arr) {
+//   arr.reverse()
+//   for (var i = 0; i < arr.length; i++) {
+//     alert(arr[i]);
+//   }
+  
+// }
+
+// reversedLooper(letters)
+
+function reversedLooper(arr) {
+  for (var i = arr.length - 1; i >= 0; i--) {
+    alert(arr[i]);
+  }
+  
+}
+
+reversedLooper(letters)
 
 
 
@@ -88,7 +107,20 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
   Return an array that contains the even numbers from the nums array.
 */
 
-//Code Here
+function evenFinder(arr) {
+  var evenArray = []
+  
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenArray.push(arr[i])
+    }
+  }
+
+
+  return evenArray
+}
+
+evenFinder(nums)
 
 
 
