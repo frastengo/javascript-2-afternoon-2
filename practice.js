@@ -83,7 +83,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   
 // }
 
-// reversedLooper(letters)
+reversedLooper(letters)
 
 function reversedLooper(arr) {
   for (var i = arr.length - 1; i >= 0; i--) {
@@ -120,7 +120,7 @@ function evenFinder(arr) {
   return evenArray
 }
 
-evenFinder(nums)
+console.log(evenFinder(nums))
 
 
 
@@ -134,9 +134,6 @@ evenFinder(nums)
 
 
 
-
-
-
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
@@ -145,10 +142,28 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 /*
   Write a function called divider that is given one argument, numbersArray.
-  Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
+  Have divider return an Array with the first item in the array being the evens array (
+    all the even values from numbersArray) and the second item in the Array being the odds 
+    array (all the odd values from numbersArray).
 */
 
-//Code Here
+function divider(arr) {
+  var finalArray = []
+  var evenArray = []
+  var oddArray = []
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      evenArray.push(arr[i])
+    }
+    else if (arr[i] % 2 === 1) {
+      oddArray.push(arr[i])
+    }
+  }
+  finalArray.push(evenArray, oddArray)  
+return finalArray
+}
+
+divider(numbersArray)
 
 
 
@@ -158,6 +173,8 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 var getRandomArbitrary = function() {
   return Math.floor(Math.random() * 30);
 };
+
+console.log(getRandomArbitrary())
 // Do not edit the code above.
 
 /* 
@@ -169,7 +186,14 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr){
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] === getRandomArbitrary()){
+      return true
+    }
+  }
+return false
+}
 
 
 
