@@ -222,7 +222,48 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(arr, itemToRemove){
+  var emptyArray = []
+  if(arr !== false && arr !== null && arr !== undefined && arr !== NaN && arr !== 0 && arr !== "" && itemToRemove !== false && itemToRemove !== null && itemToRemove !== undefined && itemToRemove !== NaN && itemToRemove !== 0 && itemToRemove !== ""){
+    for (var i = 0; i < arr.length; i++){
+      if (arr[i] === itemToRemove){
+        arr.splice(i, 1)
+      }
+    }
+  return arr  
+  }
+  else {
+    return emptyArray
+  } 
+}
+
+removeItem(myGroceryList, 'chips')
+
+function addItem(arr, itemToAdd){
+  var emptyArray2 = []
+  if(arr !== false && arr !== null && arr !== undefined && arr !== NaN && arr !== 0 && arr !== "" && itemToAdd !== false && itemToAdd !== null && itemToAdd !== undefined && itemToAdd !== NaN && itemToAdd !== 0 && itemToAdd !== "") {
+    arr.push(itemToAdd)
+    return arr
+  }
+  else {
+    return emptyArray2
+  }
+}
+
+
+// METHOD NUMBER 2 
+// var removeItem = (list, target) => {
+//   if (list.indexOf(target) >= 0) {
+//     list.splice(list.indexOf(target), 1);
+//     return list;
+//   }
+// }
+
+// var addItem = (list, target) => {
+
+// }
+// console.log(myGroceryList);
+// removeItem(myGroceryList, 'chips');
 
 
 
