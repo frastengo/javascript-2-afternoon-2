@@ -326,12 +326,12 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-function longer(arr11, arr22){
-  if (arr11.length > arr22.length){
-    return arr11
+function longer(arr1, arr2){
+  if (arr1.length > arr2.length){
+    return arr1
   }
   else {
-    return arr22
+    return arr2
   }
 }
 
@@ -346,8 +346,19 @@ function longer(arr11, arr22){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  var matching = []
+  for (i = 0; i < arr1.length; i++){
+    for (j = 0; j < arr2.length; j++){
+      if (arr1[i] === arr2[j]) {
+        matching.push(arr1[i])
+      }
+    }
+  }
+  return matching
+}
 
+console.log(arr1)
 
 
 ////////// PROBLEM 12 //////////
@@ -386,7 +397,7 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+devMountainEmployees.push(tyler, cahlan, ryan, colt)
 
 
 
@@ -395,7 +406,12 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+for (var i = 0; i < devMountainEmployees.length; i++){
+  if (devMountainEmployees[i].name === 'Cahlan'){
+    devMountainEmployees.splice(i, 1)
+  }
+}
+
 
 
 
@@ -407,9 +423,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
-
-
+var users = []
 
 /*
   Now add three user objects to your users array. Each user object should contain the following properties. name, email, password, username.
@@ -426,8 +440,23 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+var user2 = {
+  name: 'George McGinnis',
+  email: 'georgemcginnis33@gmail.com',
+  password: 'iLoveloveJavaScript',
+  username: 'infiniteLoops'  
+};
 
+var user3 = {
+  name: 'Jake McGinnis',
+  email: 'jake@gmail.com',
+  password: 'inlove',
+  username: 'loops'  
+};
+
+
+users.push(user1, user2, user3)
+console.log(users)
 
 
 /*
@@ -440,7 +469,11 @@ var user1 = {
   Once you find the particular index he's located in, delete him from the array.
 */
 
-//Code Here
+for (var i = 0; i < users.length; i++){
+  if (users[i].email === 'tylermcginnis33@gmail.com'){
+    users.splice(i, 1)
+  }
+}
 
 
 
